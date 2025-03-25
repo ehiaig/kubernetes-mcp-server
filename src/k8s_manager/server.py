@@ -26,7 +26,6 @@ logger = logging.getLogger(__name__)
 class ScriptRunner:
     def __init__(self):
         self.data = {}
-        self.notes: list[str] = []
         
     def get_file_content(self, file_path):
         file_content = Path(file_path).read_text()
@@ -75,9 +74,8 @@ class ScriptRunner:
         # Check if path is a directory
         if not os.path.isdir(normalized_path):
             raise NotADirectoryError(f"Path is not a directory: {normalized_path}")
-    
-        self.notes.append(f"Getting files in directory {normalized_path}")
-        test_res = []
+        
+        result = []
         for file in os.listdir(normalized_path):
             full_file_path = os.path.join(normalized_path, file)
             
@@ -85,8 +83,8 @@ class ScriptRunner:
                 k8s_config = self.get_file_content(full_file_path)
                 
                 file_name = file.split("/")[-1]
-                test_res.append(TextContent(type="text", text=f"{file_name}:'{k8s_config}'"))
-        return test_res
+                result.append(TextContent(type="text", text=f"{file_name}:'{k8s_config}'"))
+        return result
 
 
 class K8STools(str, Enum):
