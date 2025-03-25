@@ -1,4 +1,4 @@
-Kubernetes MCP Server
+# Kubernetes MCP Server
 
 An MCP server for debugging and managing Kubernetes using Natural Language
 
@@ -8,7 +8,7 @@ This MCP Server lets you:
 3. Connect and manage a Kubernetes cluster (Coming soon)
 
 
-Quickstart
+## Quickstart
 1. Install Claude Desktop
 2. Open the Claude json file
   On MacOS: `~/Library/Application\ Support/Claude/claude_desktop_config.json`
@@ -48,7 +48,7 @@ For Published Servers
 }
 
 
-🚧 Disclaimers
+## 🚧 Disclaimers
 
 Sensitive Data
 
