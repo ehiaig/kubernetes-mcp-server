@@ -10,11 +10,6 @@ This MCP Server lets you:
 
 ## Quickstart
 1. Install Claude Desktop
-2. Open the Claude json file
-
-  On MacOS: `~/Library/Application\ Support/Claude/claude_desktop_config.json`
-
-  On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
 
 3. Install this MCP server
 
@@ -26,6 +21,12 @@ Or
 
 - Clone this repo:
 `git clone https://github.com/ehiaig/kubernetes-mcp-server.git`
+
+3. Open the Claude json file
+
+  On MacOS: `~/Library/Application\ Support/Claude/claude_desktop_config.json`
+
+  On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
 
 And then add the following to your MCP servers file:
 
@@ -42,6 +43,25 @@ For Local testing with Claude Desktop
         "k8s_manager"
     ]
   }
+}
+```
+
+Your `claude_desktop_config.json` file should look similar to this:
+
+```
+{
+    "mcpServers": {
+        "kubernetes-mcp-server": {
+            "command": "/path/to/your/.local/bin/uv",
+            "args": [
+                "--directory",
+                "/path/to/this/repo/kubernetes-mcp-server/src/k8s_manager",
+                "run",
+                "-m",
+                "k8s_manager"
+            ]
+        }
+    }
 }
 ```
 
