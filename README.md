@@ -38,6 +38,7 @@ For Local testing with Claude Desktop
 
 For Published Servers
 
+```
 "mcpServers": {
   "kubernetes-mcp-server": {
     "command": "uvx",
@@ -46,7 +47,7 @@ For Published Servers
     ]
   }
 }
-
+```
 
 ## 🚧 Disclaimers
 
