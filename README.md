@@ -1,22 +1,24 @@
 # Kubernetes MCP Server
 
-An MCP server for debugging and managing Kubernetes using Natural Language
+An MCP server for debugging and managing Kubernetes config using Natural Language
 
 This MCP Server lets you:
 1. Debug a kubernetes config yaml/yml file
 2. Debug an entire kubernetes config folder that contains yaml/yml files
-3. Connect and manage a Kubernetes cluster (Coming soon)
+3. Connect and manage a Kubernetes cluster **(Coming soon)**
 
 
 ## Quickstart
 1. Install Claude Desktop
 2. Open the Claude json file
+
   On MacOS: `~/Library/Application\ Support/Claude/claude_desktop_config.json`
+
   On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
 
 3. Install this MCP server with `uv`
 
-Run: `uv pip install git+https://github.com/ehiaig/kubernetes-mcp-server
+Run: `uv pip install git+https://github.com/ehiaig/kubernetes-mcp-server`
 
 And then add the following to your MCP servers file:
 
