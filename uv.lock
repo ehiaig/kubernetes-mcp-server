@@ -118,9 +118,9 @@ wheels = [
 ]
 
 [[package]]
-name = "k8s-mcp"
+name = "k8s-manager"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "httpx" },
     { name = "mcp", extra = ["cli"] },

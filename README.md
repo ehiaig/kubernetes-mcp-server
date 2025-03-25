@@ -1,0 +1,69 @@
+Kubernetes MCP Server
+
+An MCP server for debugging and managing Kubernetes using Natural Language
+
+This MCP Server lets you:
+1. Debug a kubernetes config yaml/yml file
+2. Debug an entire kubernetes config folder that contains yaml/yml files
+3. Connect and manage a Kubernetes cluster (Coming soon)
+
+Usage with Claude Desktop
+```
+{
+  "mcpServers": {
+    "k8s-manager": {
+      "command": "uv",
+      "args": ["mcp-server-kubernetes"]
+    }
+  }
+}
+```
+
+Quickstart
+1. Install Claude Desktop
+2. Open the Claude json file
+  On MacOS: `~/Library/Application\ Support/Claude/claude_desktop_config.json`
+  On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
+
+3. Install this MCP server with `uv`
+
+Run: `uv pip install git+https://github.com/ehiaig/kubernetes-mcp-server
+
+And then add the following to your MCP servers file:
+
+For Local testing with Claude Desktop
+```
+{
+    "kubernetes-mcp-server": {
+    "command": "/path/to/your/.local/bin/uv", // or "uv"
+    "args": [
+        "--directory",
+        "/path/to/this/repo/kubernetes-mcp-server",
+        "run",
+        "kubernetes-mcp-server"
+    ]
+  }
+}
+```
+
+For Published Servers
+
+"mcpServers": {
+  "kubernetes-mcp-server": {
+    "command": "uvx",
+    "args": [
+      "kubernetes-mcp-server"
+    ]
+  }
+}
+
+
+🚧 Disclaimers
+
+Sensitive Data
+
+DO NOT CONFIGURE CLUSTERS WITH SENSITIVE DATA. This includes Secrets, database passwords, etc.
+
+Any sensitive data exchanged with the LLM is inherently compromised, unless the LLM is running on your local machine.
+
+If you are interested in securely passing secrets to CLUSTERS, file an issue on this repository with your use-case.
