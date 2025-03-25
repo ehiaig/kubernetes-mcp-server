@@ -16,9 +16,16 @@ This MCP Server lets you:
 
   On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
 
-3. Install this MCP server with `uv`
+3. Install this MCP server
+
+- Using uv: `uv`
 
 Run: `uv pip install git+https://github.com/ehiaig/kubernetes-mcp-server`
+
+Or 
+
+- Clone this repo:
+`git clone https://github.com/ehiaig/kubernetes-mcp-server.git`
 
 And then add the following to your MCP servers file:
 
