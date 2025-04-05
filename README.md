@@ -5,7 +5,18 @@ An MCP server for debugging and managing Kubernetes config using Natural Languag
 This MCP Server lets you:
 1. Debug a kubernetes config yaml/yml file
 2. Debug an entire kubernetes config folder that contains yaml/yml files
-3. Connect and manage a Kubernetes cluster **(Coming soon)**
+3. Connect and manage Kubernetes clusters
+  
+## Features
+  - [x] Debug and analyze a kubernetes config yaml/yml file
+  - [x] Debug an entire kubernetes config folder that contains yaml/yml files
+  - [x] Pod management (list, get, logs, delete)
+  - [ ] Deployment management (create, list, get, logs, delete)
+  - [ ] Service management (Create, list, get, logs, delete)
+  - [ ] Namespaces management (list, get, logs, delete)
+  - [ ] Debug and Analyze Logs, Services, Seployment, Statefulset, Demonsets, Ingress, Node, Cluster
+  - [ ] Portforward to a pod or service
+  - [ ] Helm Chart installation and management
 
 
 ## Quickstart
